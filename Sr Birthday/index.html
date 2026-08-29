@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Sr. Ayaan 🎂</title>
+
+<style>
+
+/* ==============================
+   RESET
+============================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    color:#3d3045;
+
+    background:
+    radial-gradient(circle at 10% 10%, #ffd7e8, transparent 28%),
+    radial-gradient(circle at 90% 10%, #ddd5ff, transparent 28%),
+    radial-gradient(circle at 50% 100%, #d7f7ff, transparent 30%),
+    linear-gradient(135deg,#fff8fc,#f8f4ff,#f1fbff);
+}
+
+
+/* ==============================
+   FLOATING DECORATIONS
+============================== */
+
+.decor{
+    position:fixed;
+    z-index:1;
+    pointer-events:none;
+
+    font-size:32px;
+    opacity:.65;
+
+    animation:
+    float 5s ease-in-out infinite;
+}
+
+.d1{
+    top:7%;
+    left:5%;
+}
+
+.d2{
+    top:12%;
+    right:6%;
+    animation-delay:1s;
+}
+
+.d3{
+    bottom:12%;
+    left:6%;
+    animation-delay:2s;
+}
+
+.d4{
+    bottom:8%;
+    right:8%;
+    animation-delay:3s;
+}
+
+.d5{
+    top:45%;
+    left:2%;
+    animation-delay:1.5s;
+}
+
+.d6{
+    top:48%;
+    right:2%;
+    animation-delay:2.5s;
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:
+        translateY(0)
+        rotate(0deg);
+    }
+
+    50%{
+        transform:
+        translateY(-18px)
+        rotate(8deg);
+    }
+}
+
+
+/* ==============================
+   PAGE
+============================== */
+
+.page{
+
+    position:fixed;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    opacity:0;
+    pointer-events:none;
+
+    transform:
+    scale(.95)
+    translateY(20px);
+
+    transition:
+    opacity .7s ease,
+    transform .7s ease;
+
+    z-index:5;
+}
+
+.page.active{
+
+    opacity:1;
+    pointer-events:auto;
+
+    transform:
+    scale(1)
+    translateY(0);
+}
+
+
+/* ==============================
+   CARD
+============================== */
+
+.card{
+
+    width:min(800px,94vw);
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    padding:
+    clamp(25px,5vw,50px)
+    clamp(20px,5vw,40px);
+
+    text-align:center;
+
+    border-radius:
+    clamp(22px,4vw,35px);
+
+    background:
+    rgba(255,255,255,.82);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:
+    1px solid rgba(255,255,255,.9);
+
+    box-shadow:
+    0 25px 70px
+    rgba(90,60,110,.18);
+}
+
+.card::-webkit-scrollbar{
+    width:5px;
+}
+
+.card::-webkit-scrollbar-thumb{
+    background:#d4a3ce;
+    border-radius:20px;
+}
+
+
+/* ==============================
+   HEADINGS
+============================== */
+
+h1{
+
+    font-size:
+    clamp(36px,7vw,68px);
+
+    line-height:1.1;
+
+    margin-bottom:18px;
+
+    background:
+    linear-gradient(135deg,#ff5c9e,#9270ff);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+h2{
+
+    font-size:
+    clamp(24px,5vw,42px);
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+}
+
+p{
+
+    font-size:
+    clamp(15px,2vw,17px);
+
+    line-height:1.75;
+
+    margin-bottom:16px;
+}
+
+.date{
+
+    color:#a04b91;
+
+    font-size:
+    clamp(17px,2.5vw,20px);
+
+    font-weight:bold;
+}
+
+.small{
+
+    font-size:14px;
+
+    opacity:.65;
+}
+
+
+/* ==============================
+   BUTTONS
+============================== */
+
+button{
+
+    border:none;
+    outline:none;
+
+    padding:14px 28px;
+
+    margin:8px;
+
+    border-radius:50px;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff67a8,
+        #9170ff
+    );
+
+    box-shadow:
+    0 10px 25px
+    rgba(145,112,255,.25);
+
+    transition:.3s ease;
+}
+
+button:hover{
+
+    transform:
+    translateY(-4px)
+    scale(1.04);
+
+    box-shadow:
+    0 15px 35px
+    rgba(145,112,255,.35);
+}
+
+button:active{
+    transform:scale(.96);
+}
+
+.option{
+    min-width:230px;
+}
+
+.blue{
+
+    background:
+    linear-gradient(
+        135deg,
+        #55c9ff,
+        #7388ff
+    );
+}
+
+
+/* ==============================
+   WISH
+============================== */
+
+.wish{
+    text-align:left;
+    padding:5px 10px;
+}
+
+
+/* ==============================
+   MEMORY
+============================== */
+
+.memory-card{
+    width:min(900px,96vw);
+}
+
+.media-container{
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.memory-image{
+
+    display:block;
+
+    width:100%;
+
+    max-height:56vh;
+
+    object-fit:contain;
+
+    border-radius:25px;
+
+    background:white;
+
+    box-shadow:
+    0 20px 50px
+    rgba(60,40,80,.22);
+}
+
+.memory-video{
+
+    display:block;
+
+    width:100%;
+
+    max-height:56vh;
+
+    object-fit:contain;
+
+    border-radius:25px;
+
+    background:#000;
+
+    box-shadow:
+    0 20px 50px
+    rgba(60,40,80,.22);
+}
+
+
+/* ==============================
+   STICKER
+============================== */
+
+.sticker{
+
+    font-size:
+    clamp(40px,7vw,58px);
+
+    margin-bottom:8px;
+}
+
+
+/* ==============================
+   CAPTION
+============================== */
+
+.caption{
+
+    margin-top:18px;
+
+    margin-bottom:10px;
+
+    font-size:
+    clamp(17px,3vw,23px);
+
+    line-height:1.5;
+
+    font-weight:bold;
+
+    color:#704777;
+}
+
+
+/* ==============================
+   ANIMATIONS
+============================== */
+
+.slide{
+    animation:slide .8s ease;
+}
+
+.zoom{
+    animation:zoom .8s ease;
+}
+
+.rotate{
+    animation:rotate .8s ease;
+}
+
+.flip{
+    animation:flip .8s ease;
+}
+
+.bounce{
+    animation:bounce .8s ease;
+}
+
+.fade{
+    animation:fade .9s ease;
+}
+
+.swing{
+    animation:swing .9s ease;
+}
+
+.pop{
+    animation:pop .8s ease;
+}
+
+.blur{
+    animation:blur .9s ease;
+}
+
+
+@keyframes slide{
+
+    from{
+        transform:translateX(120px);
+        opacity:0;
+    }
+
+    to{
+        transform:translateX(0);
+        opacity:1;
+    }
+}
+
+
+@keyframes zoom{
+
+    from{
+        transform:scale(.5);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+
+@keyframes rotate{
+
+    from{
+        transform:
+        rotate(-10deg)
+        scale(.8);
+
+        opacity:0;
+    }
+
+    to{
+        transform:
+        rotate(0)
+        scale(1);
+
+        opacity:1;
+    }
+}
+
+
+@keyframes flip{
+
+    from{
+        transform:rotateY(90deg);
+        opacity:0;
+    }
+
+    to{
+        transform:rotateY(0);
+        opacity:1;
+    }
+}
+
+
+@keyframes bounce{
+
+    0%{
+        transform:translateY(-80px);
+        opacity:0;
+    }
+
+    60%{
+        transform:translateY(15px);
+    }
+
+    100%{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+
+@keyframes swing{
+
+    0%{
+        transform:rotate(-12deg);
+        opacity:0;
+    }
+
+    60%{
+        transform:rotate(6deg);
+    }
+
+    100%{
+        transform:rotate(0);
+        opacity:1;
+    }
+}
+
+
+@keyframes pop{
+
+    0%{
+        transform:scale(.3);
+        opacity:0;
+    }
+
+    70%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+
+@keyframes blur{
+
+    from{
+        filter:blur(15px);
+        transform:scale(1.05);
+        opacity:0;
+    }
+
+    to{
+        filter:blur(0);
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+
+/* ==============================
+   FINAL PAGE
+============================== */
+
+.final-emoji{
+
+    font-size:
+    clamp(55px,10vw,90px);
+
+    animation:
+    finalBounce
+    1.5s ease-in-out infinite;
+}
+
+@keyframes finalBounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+.treat{
+
+    margin-top:25px;
+
+    padding:20px;
+
+    border-radius:22px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff0f7,
+        #f0edff
+    );
+
+    font-size:
+    clamp(18px,3vw,24px);
+
+    font-weight:bold;
+
+    color:#8c4d84;
+}
+
+
+/* ==============================
+   CONFETTI
+============================== */
+
+.confetti{
+
+    position:fixed;
+
+    top:-40px;
+
+    z-index:100;
+
+    pointer-events:none;
+
+    animation:
+    confettiFall
+    4s linear forwards;
+}
+
+@keyframes confettiFall{
+
+    to{
+
+        transform:
+        translateY(110vh)
+        rotate(720deg);
+
+        opacity:0;
+    }
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media(max-width:600px){
+
+    .page{
+        padding:10px;
+    }
+
+    .card{
+
+        width:96vw;
+
+        max-height:92vh;
+
+        padding:
+        25px 16px;
+
+        border-radius:24px;
+    }
+
+    h1{
+        font-size:
+        clamp(32px,10vw,48px);
+    }
+
+    h2{
+        font-size:
+        clamp(22px,7vw,32px);
+    }
+
+    p{
+        font-size:15px;
+        line-height:1.65;
+    }
+
+    button{
+
+        width:
+        min(90%,330px);
+
+        padding:13px 20px;
+
+        font-size:15px;
+    }
+
+    .option{
+        min-width:0;
+    }
+
+    .memory-image{
+
+        max-height:47vh;
+
+        border-radius:18px;
+    }
+
+    .memory-video{
+
+        max-height:47vh;
+
+        border-radius:18px;
+    }
+
+    .caption{
+
+        font-size:18px;
+
+        line-height:1.45;
+    }
+
+    .sticker{
+        font-size:42px;
+    }
+
+    .decor{
+        font-size:23px;
+    }
+}
+
+
+/* ==============================
+   VERY SMALL PHONE
+============================== */
+
+@media(max-width:380px){
+
+    .card{
+        padding:20px 13px;
+    }
+
+    h1{
+        font-size:30px;
+    }
+
+    h2{
+        font-size:22px;
+    }
+
+    .memory-image,
+    .memory-video{
+        max-height:42vh;
+    }
+
+    .caption{
+        font-size:16px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- FLOATING DECORATIONS -->
+
+<div class="decor d1">🎈</div>
+<div class="decor d2">✨</div>
+<div class="decor d3">🎂</div>
+<div class="decor d4">🎁</div>
+<div class="decor d5">💖</div>
+<div class="decor d6">⭐</div>
+
+
+<!-- ==================================================
+     BACKGROUND SONG
+================================================== -->
+
+<audio
+    id="birthdaySong"
+    loop>
+
+    <source
+        src="Media/Birthday- Song.mpeg"
+        type="audio/mpeg">
+
+</audio>
+
+
+
+<!-- ==================================================
+     PAGE 1
+================================================== -->
+
+<section
+    class="page active"
+    id="page1">
+
+    <div class="card">
+
+        <div style="font-size:80px;">
+            🎁
+        </div>
+
+        <h1>
+            A Little Surprise...
+        </h1>
+
+        <p>
+            Hey Sr. Ayaan 👀
+        </p>
+
+        <p>
+
+            Someone's birthday is coming...
+
+            <br>
+
+            and apparently someone is turning
+            <strong>17</strong>. 😭😂
+
+        </p>
+
+        <p class="small">
+
+            But before we reveal anything...
+
+            <br>
+
+            you have to unlock your surprise. 🎁✨
+
+        </p>
+
+        <button onclick="openSurprise()">
+
+            Open My Surprise 🎁
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 2
+================================================== -->
+
+<section
+    class="page"
+    id="page2">
+
+    <div class="card">
+
+        <div style="font-size:70px;">
+            🤔
+        </div>
+
+        <h2>
+            One Very Important Question...
+        </h2>
+
+        <p>
+
+            Sr. Ayaan, choose carefully.
+
+            <br>
+
+            Your entire birthday depends on this. 👀😂
+
+        </p>
+
+
+        <button
+            class="option"
+            onclick="chooseOption()">
+
+            I Want This Surprise 😎
+
+        </button>
+
+
+        <button
+            class="option blue"
+            onclick="chooseOption()">
+
+            Option A Is Correct 🤓
+
+        </button>
+
+
+        <p
+            id="choiceText"
+            class="small">
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 3
+================================================== -->
+
+<section
+    class="page"
+    id="page3">
+
+    <div class="card">
+
+        <div style="font-size:60px;">
+            🎂✨
+        </div>
+
+        <h2>
+
+            🎂✨ Happy Birthday,
+            Sr. Ayaan! 🥳🤍
+
+        </h2>
+
+
+        <div class="wish">
+
+
+            <p class="date">
+
+                30 August —
+                A little day for someone
+                who deserves a little extra happiness. ✨
+
+            </p>
+
+
+            <p>
+
+                Some people become a part of our journey
+                without even realizing how memorable
+                their presence becomes. 🌸
+
+            </p>
+
+
+            <p>
+
+                Today is simply about celebrating
+                <strong>YOU</strong> —
+                your personality, your hard work,
+                your little quirks, and all the things
+                that make you you. 🫶🏻✨
+
+            </p>
+
+
+            <p>
+
+                May this new year of your life bring you
+                more success 🚀,
+                more happiness 😊,
+                more beautiful memories 📸,
+                and countless reasons to smile. 🤍✨
+
+            </p>
+
+
+            <p>
+
+                And yes… 👀
+
+                <br>
+
+                there's a little something waiting
+                for you inside. 🎁✨
+
+            </p>
+
+
+            <p>
+
+                <strong>
+                    Ready? 👇🏻💫
+                </strong>
+
+            </p>
+
+        </div>
+
+
+        <button
+            onclick="startMemories()">
+
+            OK, Let's Continue ✨
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 4 — PHOTOS & VIDEOS
+================================================== -->
+
+<section
+    class="page"
+    id="page4">
+
+    <div class="card memory-card">
+
+
+        <div
+            class="sticker"
+            id="sticker">
+            🎂
+        </div>
+
+
+        <div
+            class="media-container"
+            id="mediaContainer">
+        </div>
+
+
+        <div
+            class="caption"
+            id="caption">
+        </div>
+
+
+        <button
+            onclick="nextMemory()">
+
+            Next Surprise ➜
+
+        </button>
+
+
+        <p class="small">
+
+            Memory
+            <span id="memoryNumber">1</span>
+            /
+            <span id="totalMemory">10</span>
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     FINAL PAGE
+================================================== -->
+
+<section
+    class="page"
+    id="page5">
+
+    <div class="card">
+
+        <div class="final-emoji">
+
+            🎉🎂🥳
+
+        </div>
+
+
+        <h1>
+
+            HAPPY BIRTHDAY!
+
+        </h1>
+
+
+        <h2>
+
+            SR. AYAAN 🤍
+
+        </h2>
+
+
+        <p>
+
+            17 years old...
+
+            <br>
+
+            but already giving full CEO vibes. 😭😂
+
+        </p>
+
+
+        <p>
+
+            Mentor by profession,
+
+            <br>
+
+            agency owner by ambition,
+
+            <br>
+
+            and birthday boy by destiny. 👑🚀
+
+        </p>
+
+
+        <p>
+
+            May your agency grow,
+
+            your dreams get bigger,
+
+            your success get bigger,
+
+            and your coffee never run out. ☕😂
+
+        </p>
+
+
+        <p>
+
+            And let's clear one very important thing...
+
+        </p>
+
+
+        <p>
+
+            <strong>
+
+                Sr. Ayaan mujhse
+                2 months 5 days chotay hain... 😭😂
+
+            </strong>
+
+            <br><br>
+
+            Lekin seniority aisi show karte hain
+            jaise 20 saal baray hon. 😂
+
+        </p>
+
+
+        <p>
+
+            Aur woh legendary dialogue...
+
+            <br><br>
+
+            <strong>
+
+                "THAPPAR KHAYO GY!" 😂🥲
+
+            </strong>
+
+            <br>
+
+            Birthday website mein officially
+            archive kar diya gaya hai. 😂
+
+        </p>
+
+
+        <div class="treat">
+
+            🎂 Ab bata dein Sr...
+
+            <br><br>
+
+            <strong>
+
+                TREAT KAB DEIN GE? 👀😂
+
+            </strong>
+
+            <br><br>
+
+            Hum wait kar rahe hain. 😌🍰
+
+        </div>
+
+
+        <br>
+
+
+        <p>
+
+            Keep inspiring,
+            keep growing,
+            and keep being the mentor
+            everyone remembers. ✨
+
+        </p>
+
+
+        <div style="font-size:45px;">
+
+            🎂 🎁 🎈 🚀 👑 🥳
+
+        </div>
+
+
+        <button
+            onclick="celebrate()">
+
+            One Last Surprise 🎉
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+
+/* ==================================================
+   PAGE NAVIGATION
+================================================== */
+
+function showPage(number){
+
+    document
+    .querySelectorAll(".page")
+    .forEach(function(page){
+
+        page.classList.remove("active");
+
+    });
+
+
+    document
+    .getElementById("page" + number)
+    .classList.add("active");
+
+}
+
+
+
+/* ==================================================
+   SONG
+================================================== */
+
+const song =
+document.getElementById("birthdaySong");
+
+
+/*
+   Start song automatically after
+   user clicks Open Surprise.
+*/
+
+function startSong(){
+
+    song.volume = 0.35;
+
+    song.play()
+    .catch(function(error){
+
+        console.log(
+            "Song could not start:",
+            error
+        );
+
+    });
+
+}
+
+
+/*
+   Pause song.
+*/
+
+function pauseSong(){
+
+    song.pause();
+
+}
+
+
+/* ==================================================
+   OPEN SURPRISE
+================================================== */
+
+function openSurprise(){
+
+    /*
+       This click gives browser permission
+       to start audio.
+    */
+
+    startSong();
+
+    showPage(2);
+
+}
+
+
+
+/* ==================================================
+   OPTION
+================================================== */
+
+function chooseOption(){
+
+    document
+    .getElementById("choiceText")
+    .innerHTML =
+    "Excellent choice 😌✨ You passed the most difficult birthday test!";
+
+    setTimeout(function(){
+
+        showPage(3);
+
+    },1200);
+
+}
+
+
+
+/* ==================================================
+   MEMORY DATA
+================================================== */
+
+const memories = [
+
+    {
+        type:"image",
+        src:"Media/Photo 1.jpeg",
+        sticker:"🎂",
+        caption:
+        "Every great story starts somewhere... and this one deserves cake. 🎂✨",
+        effect:"slide"
+    },
+
+
+    {
+        type:"image",
+        src:"Media/Photo 2.jpeg",
+        sticker:"😂",
+        caption:
+        "17 years of existence... and already giving full mentor vibes. 😂",
+        effect:"zoom"
+    },
+
+
+    {
+        type:"image",
+        src:"Media/Photo 3.jpeg",
+        sticker:"👑",
+        caption:
+        "Agency owner unlocked... because apparently normal teenage life was too easy. 👑🚀",
+        effect:"rotate"
+    },
+
+
+    {
+        type:"image",
+        src:"Media/Photo 4.jpeg",
+        sticker:"🤣",
+        caption:
+        "And here comes the legendary dialogue... THAPPAR KHAYO GY! 😂🥲",
+        effect:"flip"
+    },
+
+
+    {
+        type:"image",
+        src:"Media/Photo 5.jpeg",
+        sticker:"🤨",
+        caption:
+        "Sr. Ayaan mujhse 2 months 5 days chotay hain... lekin seniority full 20 years wali. 😭😂",
+        effect:"bounce"
+    },
+
+
+    /*
+       VIDEO 1
+    */
+
+    {
+        type:"video",
+        src:"Media/Video 1.mp4",
+        sticker:"🎬",
+        caption:
+        "Okay... pictures weren't enough. Ab video evidence bhi dekh lo. 👀😂",
+        effect:"fade"
+    },
+
+
+    {
+        type:"image",
+        src:"Media/Photo 6.jpeg",
+        sticker:"🚀",
+        caption:
+        "From learning to mentoring others — serious character development unlocked. 🚀✨",
+        effect:"swing"
+    },
+
+
+    {
+        type:"image",
+        src:"Media/Photo 7.jpeg",
+        sticker:"💻",
+        caption:
+        "Mentor mode: ON. Agency mode: ON. Sleep mode: ERROR 404. 😂💻",
+        effect:"pop"
+    },
+
+
+    /*
+       VIDEO 2
+    */
+
+    {
+        type:"video",
+        src:"Media/Video 2.mp4",
+        sticker:"🤣",
+        caption:
+        "This moment definitely needed to be preserved in the birthday archive. 🤣🎥",
+        effect:"zoom"
+    },
+
+
+    {
+        type:"image",
+        src:"Media/Photo 8.jpeg",
+        sticker:"👑",
+        caption:
+        "Here's to bigger dreams, bigger success and an even bigger cake. Happy Birthday! 🎂👑",
+        effect:"blur"
+    }
+
+];
+
+
+
+/* ==================================================
+   MEMORY VARIABLES
+================================================== */
+
+let currentMemory = 0;
+
+let previousWasVideo = false;
+
+
+document
+.getElementById("totalMemory")
+.innerText =
+memories.length;
+
+
+
+/* ==================================================
+   START MEMORIES
+================================================== */
+
+function startMemories(){
+
+    currentMemory = 0;
+
+    showMemory();
+
+    showPage(4);
+
+}
+
+
+
+/* ==================================================
+   SHOW MEMORY
+================================================== */
+
+function showMemory(){
+
+    const data =
+    memories[currentMemory];
+
+
+    const container =
+    document.getElementById(
+        "mediaContainer"
+    );
+
+
+    /*
+       Remove old image/video.
+    */
+
+    container.innerHTML = "";
+
+
+    /*
+       If this is a VIDEO:
+       automatically pause song.
+    */
+
+    if(data.type === "video"){
+
+        pauseSong();
+
+        previousWasVideo = true;
+
+    }
+
+    /*
+       If this is an IMAGE after a video:
+       automatically resume song.
+    */
+
+    else{
+
+        if(previousWasVideo){
+
+            startSong();
+
+        }
+
+        previousWasVideo = false;
+
+    }
+
+
+    let media;
+
+
+
+    /* ==========================
+       IMAGE
+    ========================== */
+
+    if(data.type === "image"){
+
+        media =
+        document.createElement("img");
+
+
+        media.src =
+        data.src;
+
+
+        media.alt =
+        "Birthday Memory";
+
+
+        media.className =
+        "memory-image " +
+        data.effect;
+
+    }
+
+
+
+    /* ==========================
+       VIDEO
+    ========================== */
+
+    if(data.type === "video"){
+
+        media =
+        document.createElement("video");
+
+
+        media.src =
+        data.src;
+
+
+        media.className =
+        "memory-video " +
+        data.effect;
+
+
+        media.controls =
+        true;
+
+
+        media.playsInline =
+        true;
+
+
+        media.preload =
+        "auto";
+
+
+        /*
+           IMPORTANT:
+
+           Song is already paused.
+
+           When video finishes,
+           song automatically starts again.
+        */
+
+        media.addEventListener(
+            "ended",
+            function(){
+
+                startSong();
+
+            }
+        );
+
+    }
+
+
+    /*
+       Add media to page.
+    */
+
+    container.appendChild(
+        media
+    );
+
+
+    /*
+       Sticker
+    */
+
+    document
+    .getElementById("sticker")
+    .innerText =
+    data.sticker;
+
+
+    /*
+       Caption
+    */
+
+    document
+    .getElementById("caption")
+    .innerText =
+    data.caption;
+
+
+    /*
+       Memory number
+    */
+
+    document
+    .getElementById("memoryNumber")
+    .innerText =
+    currentMemory + 1;
+
+}
+
+
+
+/* ==================================================
+   NEXT MEMORY
+================================================== */
+
+function nextMemory(){
+
+    /*
+       If currently on video and user
+       clicks Next before video finishes,
+       resume song manually through code.
+    */
+
+    if(
+        memories[currentMemory].type === "video"
+    ){
+
+        startSong();
+
+    }
+
+
+    currentMemory++;
+
+
+    /*
+       All memories finished.
+    */
+
+    if(
+        currentMemory >= memories.length
+    ){
+
+        startSong();
+
+        showPage(5);
+
+        celebrate();
+
+        return;
+
+    }
+
+
+    showMemory();
+
+}
+
+
+
+/* ==================================================
+   FINAL CONFETTI
+================================================== */
+
+function celebrate(){
+
+    startSong();
+
+
+    const emojis = [
+
+        "🎉",
+        "🎊",
+        "✨",
+        "💖",
+        "🎈",
+        "⭐",
+        "🥳",
+        "🎂",
+        "💫",
+        "👑",
+        "🍰"
+
+    ];
+
+
+    for(
+        let i=0;
+        i<140;
+        i++
+    ){
+
+        const confetti =
+        document.createElement("div");
+
+
+        confetti.className =
+        "confetti";
+
+
+        confetti.innerText =
+        emojis[
+            Math.floor(
+                Math.random() *
+                emojis.length
+            )
+        ];
+
+
+        confetti.style.left =
+        Math.random() *
+        100 +
+        "vw";
+
+
+        confetti.style.fontSize =
+        (
+            15 +
+            Math.random() *
+            25
+        ) +
+        "px";
+
+
+        confetti.style.animationDuration =
+        (
+            2 +
+            Math.random() *
+            4
+        ) +
+        "s";
+
+
+        document.body
+        .appendChild(confetti);
+
+
+        setTimeout(
+            function(){
+
+                confetti.remove();
+
+            },
+            6500
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>
